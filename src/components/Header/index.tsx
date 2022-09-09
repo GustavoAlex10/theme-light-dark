@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Container } from './styles'
-import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
+import Switch from 'react-switch'
 
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({toggleTheme}) =>{
     const { colors, title } = useContext(ThemeContext)
-
+    
 return (
     <Container>
         Hello World
@@ -25,6 +25,7 @@ return (
             handleDiameter={20}
             onColor={colors.primary}
             offColor={shade(0.15, colors.secundary)}
+            role='button'
         /> 
     </Container>
 );
